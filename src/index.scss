@@ -1,0 +1,113 @@
+@import url("./nullstyle.css");
+
+@mixin flexer($direct, $padds) {
+  display: flex;
+  flex-direction: $direct;
+  gap: $padds;
+}
+
+.header {
+  position: relative;
+  /* border: 1px solid blue; */
+  background: #cb2d41;
+  height: 7vh;
+  padding: 15px 5px;
+  text-align: center;
+}
+
+.main {
+  position: relative;
+  /* border: 1px solid green; */
+  @include flexer(row, 0rem);
+  height: 100vh;
+}
+
+.footer {
+  position: relative;
+  /* border: 1px solid red; */
+  background: #585656;
+  height: 7vh;
+  width: 100%;
+  padding: 15px 5px;
+  text-align: center;
+}
+
+.sidebar {
+  position: relative;
+  @include flexer(column, 1rem);
+  /* border: 1px solid yellow; */
+  background: #0eecc7;
+  width: 15%;
+  padding: 15px 5px;
+  text-align: start;
+
+  a {
+    font-size: large;
+    color: gray;
+    padding: 5px;
+    background-color: cyan;
+  }
+}
+
+.content {
+  position: relative;
+  @include flexer(column, 1rem);
+  // border: 1px solid purple;
+  background: #7bff5b;
+  width: 85%;
+  height: 100%;
+  padding: 15px 5px;
+  text-align: start;
+}
+
+.avatar {
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.user-info {
+  @include flexer(row, 1rem);
+}
+
+.description {
+  @include flexer(column, 1rem);
+  span {
+    font-size: medium;
+    color: rgb(184, 103, 103);
+    padding: 5px;
+    background-color: rgb(230, 255, 121);
+  }
+}
+
+.posts {
+  @include flexer(column, 1rem);
+  padding: 5px;
+  background-color: rgb(122, 148, 7);
+  color: rgb(255, 244, 244);
+  text-align: center;
+
+  &__form {
+    background-color: rgb(69, 83, 6);
+    input {
+      height: 25px;
+      margin: 10px;
+      border-radius: 30px;
+      padding: 10px;
+    }
+    button {
+      padding: 5px 15px;
+      border-radius: 30px;
+      background-color: rgb(6, 11, 83);
+      color: rgb(255, 244, 244);
+    }
+  }
+
+  &__item {
+    background-color: rgb(216, 169, 14);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 30px;
+  }
+}
