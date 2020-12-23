@@ -8,11 +8,24 @@
 
 .header {
   position: relative;
+  @include flexer(row, 1rem);
   /* border: 1px solid blue; */
   background: #cb2d41;
   height: 7vh;
-  padding: 15px 5px;
-  text-align: center;
+  padding: 5px;
+  justify-content: flex-start;
+  span {
+    margin: auto 0;
+    padding: 5px;
+    color: rgb(234, 245, 185);
+    font-size: medium;
+    box-shadow: 2px 2px 0px rgba(50, 50, 50, 0.75);
+  }
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+  }
 }
 
 .main {
@@ -30,6 +43,7 @@
   width: 100%;
   padding: 15px 5px;
   text-align: center;
+  color: white;
 }
 
 .sidebar {
@@ -58,6 +72,10 @@
   height: 100%;
   padding: 15px 5px;
   text-align: start;
+}
+
+.profile {
+  @include flexer(column, 1rem);
 }
 
 .avatar {

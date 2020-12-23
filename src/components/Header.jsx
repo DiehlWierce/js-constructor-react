@@ -1,13 +1,19 @@
 import React from "react";
+import logo from '../assets/logo.PNG'
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = "Header";
+    this.name = "Andressenger";
   }
 
   render() {
-    return <div className="header">{this.state}</div>;
+    return (
+      <div className="header">
+        <img src={logo} alt='social logo' />
+        <span>{this.name}</span>
+      </div>
+    )
   }
 }
 

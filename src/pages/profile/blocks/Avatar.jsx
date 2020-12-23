@@ -1,5 +1,5 @@
 import { Component } from "react";
-import ava from '../assets/test-image.jpg'
+import ava from '../../../assets/test-image.jpg'
 
 class Avatar extends Component {
   constructor(props) {
